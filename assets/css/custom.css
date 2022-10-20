@@ -1,0 +1,12 @@
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+}
+
+.myslide {
+  height: 300px;
+  overflow: hidden;
+}
+
+.myslide img {
+  max-height: 300px;
+}
