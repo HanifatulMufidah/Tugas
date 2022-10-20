@@ -57,21 +57,21 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="https://picsum.photos/2400/500" class="d-block mx-auto" alt="...">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption">
           <h3>First slide label</h3>
           <p>Some representative placeholder content for the first slide.</p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="https://picsum.photos/2400/600" class="d-block mx-auto" alt="...">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption">
           <h3>Second slide label</h3>
           <p>Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="https://picsum.photos/2400/700" class="d-block mx-auto" alt="...">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption">
           <h3>Third slide label</h3>
           <p>Some representative placeholder content for the third slide.</p>
         </div>
@@ -127,16 +127,16 @@
           <div class="input-group">
             <span class="input-group-text"><i class="bi bi-search"></i></span>
             <input type="text" class="form-control" placeholder="Search..." id="term">
-            <select class="form-select" aria-label="Default select example">
-              <option selected disabled>Select a Category</option>
-              <option value="0">Self Improvement</option>
-              <option value="1">Religion</option>
-              <option value="2">Novel</option>
+            <select class="form-select" id="category">
+              <option selected value="">All Category</option>
+              <option value="self improvement">Self Improvement</option>
+              <option value="religion">Religion</option>
+              <option value="novel">Novel</option>
             </select>
           </div>
         </div>
       </div>
-      <div class="row" id="books_container">
+      <div class="row justify-content-center" id="books_container">
 
       </div>
     </div>
