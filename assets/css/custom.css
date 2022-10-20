@@ -2,6 +2,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.navbar-expand-lg {
+  background-color: rgb(79, 114, 163);
+}
+
 .navbar-brand {
   font-family: 'Pacifico', cursive;
 }
@@ -43,4 +47,8 @@
 
 .modal-body p {
   margin-bottom: 0.5rem;
+}
+
+.py-3 {
+  background-color: rgb(79, 114, 163);
 }
