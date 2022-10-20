@@ -3,10 +3,32 @@
 }
 
 .myslide {
-  height: 300px;
+  height: 500px;
   overflow: hidden;
 }
 
 .myslide img {
-  max-height: 300px;
+  max-height: 500px;
 }
+
+.navbar-fixed {
+  height: 56px;
+  position: relative;
+}
+
+.carousel-caption {
+  text-shadow: 1px 1px rgba(0, 0, 0, .5);
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+section#about {
+  background-color: #fff;
+}
+
+/* .navbar {
+  position: fixed;
+  top: 0;
+} */
