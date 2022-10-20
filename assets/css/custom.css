@@ -36,3 +36,7 @@
 #books_container {
   min-height: 550px;
 }
+
+.modal-body p {
+  margin-bottom: 0.5rem;
+}

@@ -1,26 +1,34 @@
 const data = [
   {
+    id: 0,
     judul: 'Bumi Cinta',
     penulis: 'Habiburrahman El-Shirazi',
     kategori: 'novel',
+    preview: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia veniam asperiores consequuntur fugit facere optio eos commodi. Laboriosam, aut atque. Fugit fugiat earum quos ducimus facere corporis quasi, deleniti tenetur.',
     gambar: 'bumi.jpg'
   },
   {
+    id: 1,
     judul: 'Buku2',
     kategori: 'religion',
     penulis: 'Penulis2',
+    preview: 'Tulis preview di file buku.js variabel data',
     gambar: 'hujan.jpg'
   },
   {
+    id: 2,
     judul: 'Buku3',
     penulis: 'Penulis3',
     kategori: 'self improvement',
+    preview: 'Tulis preview di file buku.js variabel data',
     gambar: 'unlimited.jpg'
   },
   {
+    id: 3,
     judul: 'Buku4',
     penulis: 'Penulis4',
     kategori: 'novel',
+    preview: 'Tulis preview di file buku.js variabel data',
     gambar: 'pergi.jpg'
   },
 ]
@@ -58,7 +66,7 @@ const setCards = (term = '', category = '') => {
           <h5 class="card-title">${el.judul}</h5>
           <p class="text-muted">${el.penulis}</p>
           <div class="d-grid grid-gap-2">
-            <a href="#" class="btn btn-primary">Show Preview</a>
+            <a href="#" class="btn btn-primary" onclick="setModal(${el.id})" data-bs-toggle="modal" data-bs-target="#preview">Show Preview</a>
           </div>
         </div>
       </div>
@@ -71,6 +79,17 @@ const setCards = (term = '', category = '') => {
 }
 
 setCards()
+
+const setModal = (id) => {
+  const item = data[id]
+  document.querySelector('#img_preview').src = './assets/img/' + item.gambar
+  document.querySelector('.modal .modal-body .col-8').innerHTML = `
+  <p><b>Judul :</b> ${item.judul}</p>
+  <p><b>Penulis :</b> ${item.penulis}</p>
+  <p><b>Kategori :</b> ${item.kategori}</p>
+  <p class="text-justify">${item.preview}</p>
+  `
+}
 
 const term = document.getElementById('term')
 const category = document.getElementById('category')
