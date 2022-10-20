@@ -84,9 +84,9 @@ const setModal = (id) => {
   const item = data[id]
   document.querySelector('#img_preview').src = './assets/img/' + item.gambar
   document.querySelector('.modal .modal-body .col-8').innerHTML = `
-  <p><b>Judul :</b> ${item.judul}</p>
-  <p><b>Penulis :</b> ${item.penulis}</p>
-  <p><b>Kategori :</b> ${item.kategori}</p>
+  <p><b>Title :</b> ${item.judul}</p>
+  <p><b>Written by :</b> ${item.penulis}</p>
+  <p><b>Category :</b> ${item.kategori}</p>
   <p class="text-justify">${item.preview}</p>
   `
 }
