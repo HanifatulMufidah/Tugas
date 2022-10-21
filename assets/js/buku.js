@@ -131,7 +131,7 @@ const setCards = (term = '', category = '') => {
 
   if (items.length == 0) {
     cards = `
-    <div class="col-4 text-center">
+    <div class="col-12 col-md-6 col-lg-4 text-center">
       <img src="./assets/img/questions-animate.svg"  alt="" />
       <p>Empty search results</p>
   </div>
