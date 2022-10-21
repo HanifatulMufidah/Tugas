@@ -45,8 +45,8 @@
   min-height: 550px;
 }
 
-.modal-body p {
-  margin-bottom: 0.5rem;
+.card-title {
+  margin-bottom: 0;
 }
 
 footer {
