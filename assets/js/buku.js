@@ -125,14 +125,14 @@ const setCards = (term = '', category = '') => {
   } else {
     items.forEach(el => {
       cards += `
-      <div class="col-12 col-lg-3 col-md-4 mb-3">
+      <div class="col-6 col-md-4 col-lg-3 mb-3">
       <div class="card">
         <img src="./assets/img/${el.gambar}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${el.judul}</h5>
           <p class="text-muted">${el.penulis}</p>
           <div class="d-grid grid-gap-2">
-            <a href="#" class="btn btn-primary" onclick="setModal('${el.judul}')" data-bs-toggle="modal" data-bs-target="#preview">Show Preview</a>
+            <a href="#" class="btn btn-primary" onclick="setModal('${el.judul}')" data-bs-toggle="modal" data-bs-target="#preview">Preview</a>
           </div>
         </div>
       </div>
@@ -163,6 +163,7 @@ const category = document.getElementById('category')
 term.addEventListener('keyup', (e) => {
   setCards(e.target.value, category.value)
 })
+
 category.addEventListener('change', (e) => {
   setCards(term.value, e.target.value)
 })
