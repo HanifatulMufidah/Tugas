@@ -1,6 +1,5 @@
 const data = [
   {
-    id: 0,
     judul: 'Atomic Habits',
     penulis: 'James Clear',
     kategori: 'Self Improvement',
@@ -8,7 +7,6 @@ const data = [
     gambar: 'atomic.jpg'
   },
   {
-    id: 1,
     judul: 'Berani Tidak Disukai',
     kategori: 'Self Improvement',
     penulis: 'Ichiro Kishimi dan Fumitake Koga',
@@ -16,7 +14,6 @@ const data = [
     gambar: 'tidakdisukai.jpg'
   },
   {
-    id: 2,
     judul: 'Whats So Wrong About Your Self Healing',
     penulis: 'Ardhi Mohamad',
     kategori: 'Self Improvement',
@@ -24,7 +21,6 @@ const data = [
     gambar: 'healing.jpg'
   },
   {
-    id: 3,
     judul: 'Psychology of Money',
     penulis: 'Morgan Housel',
     kategori: 'Self Improvement',
@@ -32,7 +28,6 @@ const data = [
     gambar: 'money.jpg'
   },
   {
-    id: 4,
     judul: 'Sebuah Seni Untuk Bersikap Bodo Amat',
     penulis: 'Mark Manson',
     kategori: 'Self Improvement',
@@ -40,7 +35,6 @@ const data = [
     gambar: 'seni.jpg'
   },
   {
-    id: 5,
     judul: 'Filosofi Teras',
     penulis: 'Henry Manampiring',
     kategori: 'Self Improvement',
@@ -48,7 +42,6 @@ const data = [
     gambar: 'teras.jpg'
   },
   {
-    id: 6,
     judul: 'Maaf Tuhan, Aku Hampir Menyerah',
     penulis: 'alfialghazi',
     kategori: 'Religion',
@@ -56,7 +49,6 @@ const data = [
     gambar: 'maaf.jpg'
   },
   {
-    id: 7,
     judul: 'Tuhan Ada di Hatimu',
     penulis: 'Husein Jafar Al-Hadar',
     kategori: 'Religion',
@@ -64,7 +56,6 @@ const data = [
     gambar: 'hati.jpg'
   },
   {
-    id: 8,
     judul: 'Unlimited You',
     penulis: 'Wirda Mansur',
     kategori: 'Religion',
@@ -72,7 +63,6 @@ const data = [
     gambar: 'unlimited.jpg'
   },
   {
-    id: 8,
     judul: 'Hujan',
     penulis: 'Tere Liye',
     kategori: 'Novel',
@@ -80,7 +70,6 @@ const data = [
     gambar: 'hujan.jpg'
   },
   {
-    id: 9,
     judul: 'Bumi Cinta',
     penulis: 'Habiburrahman El Shirazy',
     kategori: 'Novel',
@@ -88,7 +77,6 @@ const data = [
     gambar: 'bumi.jpg'
   },
   {
-    id: 10,
     judul: 'Pulang',
     penulis: 'Tere Liye',
     kategori: 'Novel',
@@ -96,7 +84,6 @@ const data = [
     gambar: 'pulang.jpg'
   },
   {
-    id: 11,
     judul: 'Pergi',
     penulis: 'Tere Liye',
     kategori: 'Novel',
@@ -104,7 +91,6 @@ const data = [
     gambar: 'pergi.jpg'
   },
   {
-    id: 12,
     judul: 'Pulang-Pergi',
     penulis: 'Tere Liye',
     kategori: 'Novel',
@@ -146,7 +132,7 @@ const setCards = (term = '', category = '') => {
           <h5 class="card-title">${el.judul}</h5>
           <p class="text-muted">${el.penulis}</p>
           <div class="d-grid grid-gap-2">
-            <a href="#" class="btn btn-primary" onclick="setModal(${el.id})" data-bs-toggle="modal" data-bs-target="#preview">Show Preview</a>
+            <a href="#" class="btn btn-primary" onclick="setModal('${el.judul}')" data-bs-toggle="modal" data-bs-target="#preview">Show Preview</a>
           </div>
         </div>
       </div>
@@ -160,8 +146,8 @@ const setCards = (term = '', category = '') => {
 
 setCards()
 
-const setModal = (id) => {
-  const item = data[id]
+const setModal = (title) => {
+  const item = data.filter(e => e.judul == title)[0]
   document.querySelector('#img_preview').src = './assets/img/' + item.gambar
   document.querySelector('.modal .modal-body .col-8').innerHTML = `
   <p><b>Title :</b> ${item.judul}</p>
