@@ -49,6 +49,19 @@
   margin-bottom: 0.5rem;
 }
 
-.py-3 {
+footer {
   background-color: rgb(79, 114, 163);
+}
+
+.btn-primary {
+  background-color: rgb(79, 114, 163);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: rgb(69, 100, 143);
+}
+
+.btn-primary:active {
+  background-color: rgb(62, 90, 129) !important;
 }
