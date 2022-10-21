@@ -120,7 +120,7 @@ const setCards = (term = '', category = '') => {
 
   if (term != '' || category != '') {
     if (category != '') {
-      items = data.filter(e => e.kategori == category && e.judul.toLowerCase().match(term.toLowerCase().trim()))
+      items = data.filter(e => e.kategori.toLowerCase() == category && e.judul.toLowerCase().match(term.toLowerCase().trim()))
     } else {
       items = data.filter(e => e.judul.toLowerCase().match(term.toLowerCase().trim()))
     }
