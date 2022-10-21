@@ -116,13 +116,19 @@ const setCards = (term = '', category = '') => {
 
 
   if (items.length == 0) {
+
+    books_container.classList.add('justify-content-center')
+
     cards = `
     <div class="col-12 col-md-6 col-lg-4 text-center">
-      <img src="./assets/img/questions-animate.svg"  alt="" />
-      <p>Empty search results</p>
-  </div>
+    <img src="./assets/img/questions-animate.svg"  alt="" />
+    <p>Empty search results</p>
+    </div>
     `
   } else {
+
+    books_container.classList.remove('justify-content-center')
+
     items.forEach(el => {
       cards += `
       <div class="col-6 col-md-4 col-lg-3 mb-3">
